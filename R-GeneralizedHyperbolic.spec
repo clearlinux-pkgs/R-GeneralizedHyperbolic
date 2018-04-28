@@ -4,7 +4,7 @@
 #
 Name     : R-GeneralizedHyperbolic
 Version  : 0.8.1
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/GeneralizedHyperbolic_0.8-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/GeneralizedHyperbolic_0.8-1.tar.gz
 Summary  : The Generalized Hyperbolic Distribution
