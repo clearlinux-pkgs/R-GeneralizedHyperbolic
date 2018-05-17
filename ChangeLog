@@ -1,3 +1,26 @@
+2014-10-05    <d.scott@auckland.ac.nz>
+
+	* DESCRIPTION changed, RUnit Suggests. Makefile fixed, LEVEL = 1
+	deleted. 
+
+2013-04-22    <d.scott@auckland.ac.nz>
+
+	* ghypParam.rda, hyperbParam.rda, nigParam.rda changed by rounding
+	the alpha and beta values to three decimal places. One decimal
+	place resulted in some alpha = abs(beta) cases.
+
+2013-04-19    <d.scott@auckland.ac.nz>
+
+	* ghypParam.rda, hyperbParam.rda, nigParam.rda changed by rounding
+	the alpha and beta values to one decimal place
+
+	* runit.dgig.R added to graphically test both standard and extreme
+	cases (being ones where omega > 700)
+
+	* dgig changed to avoid underflow. Log evaluated and
+	exponentially-scaled Bessel function used when omega > 700
+
+
 2012-04-13    <d.scott@auckland.ac.nz>
 
 	* ArkansasRiver added as a data set giving data provided by Eric
