@@ -4,7 +4,7 @@
 #
 Name     : R-GeneralizedHyperbolic
 Version  : 0.8.4
-Release  : 17
+Release  : 18
 URL      : https://cran.r-project.org/src/contrib/GeneralizedHyperbolic_0.8-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/GeneralizedHyperbolic_0.8-4.tar.gz
 Summary  : The Generalized Hyperbolic Distribution
@@ -24,10 +24,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1548272934
+export SOURCE_DATE_EPOCH=1552762025
 
 %install
-export SOURCE_DATE_EPOCH=1548272934
+export SOURCE_DATE_EPOCH=1552762025
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -63,8 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library GeneralizedHyperbolic|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  GeneralizedHyperbolic || :
 
 
 %files
@@ -103,10 +102,12 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/GeneralizedHyperbolic/html/00Index.html
 /usr/lib64/R/library/GeneralizedHyperbolic/html/R.css
 /usr/lib64/R/library/GeneralizedHyperbolic/hyperbWSqTable.R
+/usr/lib64/R/library/GeneralizedHyperbolic/tests/doRUnit.R
+/usr/lib64/R/library/GeneralizedHyperbolic/tests/ghypInversionTests.R
+/usr/lib64/R/library/GeneralizedHyperbolic/tests/problemData.R
+/usr/lib64/R/library/GeneralizedHyperbolic/tests/runghypMoments.R
+/usr/lib64/R/library/GeneralizedHyperbolic/tests/test.qgig.R
 /usr/lib64/R/library/GeneralizedHyperbolic/unitTests/Makefile
-/usr/lib64/R/library/GeneralizedHyperbolic/unitTests/report.html
-/usr/lib64/R/library/GeneralizedHyperbolic/unitTests/report.txt
-/usr/lib64/R/library/GeneralizedHyperbolic/unitTests/reportSummary.txt
 /usr/lib64/R/library/GeneralizedHyperbolic/unitTests/runTests.R
 /usr/lib64/R/library/GeneralizedHyperbolic/unitTests/runit.dghyp.R
 /usr/lib64/R/library/GeneralizedHyperbolic/unitTests/runit.dgig.R
