@@ -4,7 +4,7 @@
 #
 Name     : R-GeneralizedHyperbolic
 Version  : 0.8.4
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/GeneralizedHyperbolic_0.8-4.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/GeneralizedHyperbolic_0.8-4.tar.gz
 Summary  : The Generalized Hyperbolic Distribution
@@ -13,28 +13,35 @@ License  : GPL-2.0+
 Requires: R-DistributionUtils
 BuildRequires : R-DistributionUtils
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
-No detailed description available
+Density, distribution and quantile functions and random number generation
+  are provided for the hyperbolic distribution, the generalized hyperbolic
+        distribution, the generalized inverse Gaussian distribution and
+        the skew-Laplace distribution. Additional functionality is
+        provided for the hyperbolic distribution, normal inverse
+	Gaussian distribution and generalized inverse Gaussian distribution,
+	including fitting of these distributions to data. Linear models with
+        hyperbolic errors may be fitted using hyperblmFit.
 
 %prep
 %setup -q -c -n GeneralizedHyperbolic
+cd %{_builddir}/GeneralizedHyperbolic
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571836560
+export SOURCE_DATE_EPOCH=1589520215
 
 %install
-export SOURCE_DATE_EPOCH=1571836560
+export SOURCE_DATE_EPOCH=1589520215
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
